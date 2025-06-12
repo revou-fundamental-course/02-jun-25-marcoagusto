@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beranda - Sekolahku</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://storage.googleapis.com/danacita-website-v3-prd/website_v3/images/Revou-alasan.original.png" alt="Logo Sekolah">
+      <span>Sekolahku</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="profile.html">Our Profile</a></li>
+        <li><a href="#achievement">Achievement</a></li>
+        <li><a href="#message">Message Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="welcome">
+      <h2 id="welcome-text">Hi, <span id="user-name"></span>! Selamat Datang di Website Sekolahku</h2>
+      <p>Ini adalah website latihan pertama.</p>
+      <div class="slider">
+        <img src="https://apps-soc.telkomuniversity.ac.id/static/assets/img/gd_tult.jpg" alt="Gedung Telkom University" class="slider-img">
+      </div>
+    </section>
+
+
+    <section class="facilitation">
+      <h3>Our <span class="highlight">Facilitation</span></h3>
+      <div class="facilities">
+        <div class="facility">
+          <div class="circle"></div>
+          <p>Professional Teacher</p>
+        </div>
+        <div class="facility">
+          <div class="circle"></div>
+          <p>Sport Field</p>
+        </div>
+        <div class="facility">
+          <div class="circle"></div>
+          <p>Classroom</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="achievement" class="achievement">
+      <h3>Our Achievement</h3>
+      <ul>
+        <li>Juara 1 Olimpiade Matematika Nasional 2024</li>
+        <li>Juara 2 Lomba Futsal Antar Sekolah 2023</li>
+        <li>Juara 1 Lomba Sains Kota 2022</li>
+      </ul>
+    </section>
+
+     <section class="message-us">
+    <h3>Message Us</h3>
+    <div class="message-container">
+      <form id="messageForm" autocomplete="off">
+        <div class="form-row">
+          <label for="name-input">Nama :</label>
+          <input type="text" id="name-input" required placeholder="Nama">
+        </div>
+        <div class="form-row">
+          <label for="dob">Tanggal Lahir :</label>
+          <input type="date" id="dob" required>
+        </div>
+        <div class="form-row">
+          <label>Jenis Kelamin :</label>
+          <input type="radio" id="male" name="gender" value="Laki-Laki" required>
+          <label for="male">Laki-Laki</label>
+          <input type="radio" id="female" name="gender" value="Perempuan">
+          <label for="female">Perempuan</label>
+        </div>
+        <div class="form-row">
+          <label for="message">Pesan :</label>
+          <textarea id="message" rows="3" required placeholder="Pesan"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+      <div class="message-result" id="messageResult">
+        <!-- Hasil inputan tampil di sini -->
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Created by Marco</p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

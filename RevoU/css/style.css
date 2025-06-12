@@ -1,0 +1,341 @@
+:root {
+  --primary: #ffe600;
+  --dark: #222;
+  --light: #fafafa;
+  --border: #ccc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fff;
+  color: var(--dark);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--dark);
+  padding: 10px 30px;
+  background: var(--light);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  border-radius: 50%;
+  background: var(--primary);
+  width: 40px;
+  height: 40px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--dark);
+  border: 1px solid #888;
+  padding: 6px 18px;
+  border-radius: 4px;
+  background: #fff;
+  transition: background 0.2s;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  background: var(--primary);
+}
+
+main {
+  padding-bottom: 40px;
+}
+
+/* Welcome Section */
+.welcome {
+  padding: 30px;
+  min-height: 180px;
+  border-bottom: 2px solid var(--dark);
+}
+
+.welcome h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.3em;
+  font-weight: normal;
+}
+
+.slider {
+  margin-top: 40px;
+  width: 100%;
+  height: 220px;
+  background: #fafafa;
+  border: 1px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  overflow: hidden;
+}
+
+.slider-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Facilitation */
+.facilitation {
+  padding: 30px 30px 0 30px;
+}
+
+.facilitation h3 {
+  margin-bottom: 28px;
+  font-weight: normal;
+}
+
+.facilitation .highlight {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.facilities {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.facility {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #aaa;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.facility p {
+  text-align: center;
+  font-size: 0.98em;
+  margin: 0;
+}
+
+/* Achievement */
+.achievement {
+  padding: 30px;
+}
+
+.achievement ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+/* Message Us */
+.message-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+#messageForm {
+  width: 400px;
+  border: 1px solid #888;
+  padding: 20px;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.form-row label {
+  width: 120px;
+  font-size: 1em;
+}
+
+.form-row input[type="text"],
+.form-row input[type="date"],
+.form-row textarea {
+  flex: 1;
+  padding: 6px;
+  margin-left: 8px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  font-size: 1em;
+}
+
+.form-row textarea {
+  resize: vertical;
+}
+
+.form-row input[type="radio"] {
+  margin-left: 8px;
+  margin-right: 2px;
+}
+
+#messageForm button {
+  width: 100%;
+  padding: 8px 0;
+  border: 1px solid #888;
+  background: #fafafa;
+  font-size: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.message-result {
+  width: 400px;
+  min-height: 220px;
+  border: 1px solid #222;
+  padding: 20px;
+  background: #fff;
+  font-size: 1em;
+}
+
+@media (max-width: 900px) {
+  .message-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  #messageForm, .message-result {
+    width: 100%;
+  }
+}
+
+/* Profile Banner */
+.profile-banner {
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+}
+
+.profile-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(34,34,34,0.5);
+}
+
+.profile-banner .banner-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.profile-banner h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.profile-banner p {
+  margin: 8px 0 0 0;
+  font-size: 1.2em;
+}
+
+/* About School */
+.about-school {
+  padding: 30px;
+  background: #f6f6f6;
+}
+
+.about-school h2 {
+  margin-top: 0;
+}
+
+.about-school ul {
+  margin: 10px 0 0 18px;
+}
+
+/* Vision & Mission */
+.vision-mission {
+  padding: 30px;
+}
+
+.vision-mission h2 {
+  margin-top: 0;
+}
+
+.vision, .mission {
+  margin-bottom: 18px;
+}
+
+.vision h3, .mission h3 {
+  margin-bottom: 6px;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid #ccc;
+  text-align: right;
+  padding: 10px 30px;
+  font-size: 0.95em;
+  color: #888;
+  background: var(--light);
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .facilities {
+    gap: 20px;
+    justify-content: center;
+  }
+  .message-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  #messageForm, .message-result {
+    width: 100%;
+    min-width: 0;
+  }
+  .about-school, .vision-mission, .facilitation, .achievement, .message-us, .welcome {
+    padding: 18px;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 12px;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 500px) {
+  .profile-banner h1 {
+    font-size: 1.2em;
+  }
+  .profile-banner p {
+    font-size: 1em;
+  }
+}
